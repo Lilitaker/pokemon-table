@@ -5,6 +5,7 @@ $.ajax({
   success: function (data) {
     let pokemonList = [...data.results];
 
+    /* Get URLs */
     let pokemonURL = pokemonList.map((pok) => {
       return $.ajax({
         type: 'GET',
@@ -54,3 +55,19 @@ $.ajax({
     });
   },
 });
+
+/* //Get the JQuery Version
+if (typeof jQuery != 'undefined') {
+  // jQuery is loaded => print the version
+  alert(jQuery.fn.jquery);
+}
+
+if (window.jQuery) {
+  // jQuery is available.
+
+  // Print the jQuery version, e.g. "1.0.0":
+  console.log(window.jQuery.fn.jquery);
+} */
+
+//Get the Data Table version
+//console.log($.fn.dataTable.version);
